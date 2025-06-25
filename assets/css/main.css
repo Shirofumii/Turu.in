@@ -720,15 +720,24 @@ a.f-btn.f-custom-btn {
   }
 }
 .header-btn a {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* jarak antara icon dan teks */
   color: #fff;
-  background: #181b1d;
-  padding: 0 38px;
-  height: 60px;
-  line-height: 60px;
+  background: #2D48C3; /* warna dari screenshot */
+  padding-right: 20px; /* tetap nyaman */
+  height: 50px;
+  line-height: 50px;
   border-radius: 15px;
   font-weight: 700;
 }
+
+.header-btn a i {
+  margin-left: -4px; /* geser ikon sedikit ke kiri */
+  font-size: 16px;
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .header-btn a {
     padding: 0 25px;

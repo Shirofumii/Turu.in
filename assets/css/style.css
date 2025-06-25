@@ -9707,3 +9707,27 @@ p.mb-45 {
 
 /*# sourceMappingURL=style.css.map */
 
+.extra-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.extra-info span {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555; /* warna teks */
+  background: #f6f7fb;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.extra-info span i {
+  margin-right: 6px;
+  color: #2d48c3; /* warna ikon */
+  font-size: 14px;
+}
