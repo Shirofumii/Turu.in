@@ -295,6 +295,8 @@
                         </div>
                         <!-- /. search result top -->
                         <div class="search-result-bottom">
+                            <div id="search-summary" class="mb-30" style="font-weight: 500; font-size: 18px;"></div>
+
                             <div class="tab-content" id="pills-tabContent">
                                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
                                     <div class="row">
@@ -824,5 +826,32 @@
 <script src="assets/js/odometer.min.js"></script>
 <script src="assets/js/nice-select.min.js"></script>
 <script src="assets/js/script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const keyword = (params.get("keyword") || "").toLowerCase();
+    const category = (params.get("category") || "").toLowerCase();
+    const location = (params.get("location") || "").toLowerCase();
+
+    // Set search summary
+    const summaryText = `Showing results for: ${category || "all categories"} in ${location || "all locations"} with keyword ${keyword || "any keyword"}`;
+    const summaryEl = document.getElementById("search-summary");
+    if (summaryEl) summaryEl.textContent = summaryText;
+
+    // Filter items
+    const items = document.querySelectorAll(".filter-grid .grid-item");
+    items.forEach(item => {
+      const title = item.querySelector(".title a")?.textContent.toLowerCase() || "";
+      const loc = item.querySelector(".extra-info span")?.textContent.toLowerCase() || "";
+      const itemCategory = Array.from(item.classList).find(c => ["house", "apartment", "villa", "hotel"].includes(c));
+
+      const matchKeyword = !keyword || title.includes(keyword);
+      const matchLocation = !location || loc.includes(location);
+      const matchCategory = !category || category === itemCategory;
+
+      item.style.display = (matchKeyword && matchLocation && matchCategory) ? "" : "none";
+    });
+  });
+</script>
 </body>
 </html>

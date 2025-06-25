@@ -723,11 +723,11 @@ a.f-btn.f-custom-btn {
   display: block;
   color: #fff;
   background: #181b1d;
-  padding: 0 38px;
-  height: 60px;
-  line-height: 60px;
+  padding: 0 24px;
+  height: 50px;
+  line-height: 50px;
   border-radius: 15px;
-  font-weight: 700;
+  font-weight: 500;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .header-btn a {
@@ -2491,7 +2491,7 @@ a.f-btn.f-custom-btn {
   font-weight: 700;
 }
 .section-title-2 .title {
-  font-size: 72px;
+  font-size: 46px;
   color: #181b1d;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -3992,6 +3992,32 @@ a.f-btn.f-custom-btn {
   .cta-text p {
     padding-right: 80px;
   }
+}
+
+/* Custom: Samakan style dropdown kategori dengan input lain di filter-area-2 */
+.filter-area-2 .nice-select {
+  background: #fff !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  height: 44px !important;
+  line-height: 44px !important;
+  padding: 0 40px 0 20px !important;
+  color: #999 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+}
+.filter-area-2 .nice-select:after {
+  right: 20px !important;
+  color: #c5c5c5 !important;
+}
+.filter-area-2 .nice-select.open, 
+.filter-area-2 .nice-select:focus {
+  box-shadow: none !important;
+  border: 0 !important;
+}
+.filter-area-2 .nice-select .list {
+  border-radius: 8px !important;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .cta-text p {
