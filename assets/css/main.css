@@ -720,24 +720,15 @@ a.f-btn.f-custom-btn {
   }
 }
 .header-btn a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px; /* jarak antara icon dan teks */
+  display: block;
   color: #fff;
-  background: #2D48C3; /* warna dari screenshot */
-  padding-right: 20px; /* tetap nyaman */
+  background: #181b1d;
+  padding: 0 24px;
   height: 50px;
   line-height: 50px;
   border-radius: 15px;
-  font-weight: 700;
+  font-weight: 500;
 }
-
-.header-btn a i {
-  margin-left: -4px; /* geser ikon sedikit ke kiri */
-  font-size: 16px;
-}
-
 @media (min-width: 992px) and (max-width: 1199px) {
   .header-btn a {
     padding: 0 25px;
@@ -2500,7 +2491,7 @@ a.f-btn.f-custom-btn {
   font-weight: 700;
 }
 .section-title-2 .title {
-  font-size: 72px;
+  font-size: 46px;
   color: #181b1d;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -4001,6 +3992,32 @@ a.f-btn.f-custom-btn {
   .cta-text p {
     padding-right: 80px;
   }
+}
+
+/* Custom: Samakan style dropdown kategori dengan input lain di filter-area-2 */
+.filter-area-2 .nice-select {
+  background: #fff !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  height: 44px !important;
+  line-height: 44px !important;
+  padding: 0 40px 0 20px !important;
+  color: #999 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+}
+.filter-area-2 .nice-select:after {
+  right: 20px !important;
+  color: #c5c5c5 !important;
+}
+.filter-area-2 .nice-select.open, 
+.filter-area-2 .nice-select:focus {
+  box-shadow: none !important;
+  border: 0 !important;
+}
+.filter-area-2 .nice-select .list {
+  border-radius: 8px !important;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .cta-text p {
@@ -10697,10 +10714,3 @@ p.mb-45 {
 }
 
 /*# sourceMappingURL=main.css.map */
-
-@media (min-width: 1200px) {
-  .col-xl-3 {
-    flex: 0 0 20% !important;
-    max-width: 20% !important;
-  }
-}

@@ -61,7 +61,7 @@ $('.popup-video').magnificPopup({
     /*------------------------------------
         Categories Slider
     --------------------------------------*/
-    $('.categories-slider').slick({
+ $('.categories-slider').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
         infinite: true,
@@ -99,6 +99,7 @@ $('.popup-video').magnificPopup({
             }
         ]
     });
+
     /*------------------------------------
         Gallery Slider
     --------------------------------------*/
@@ -225,7 +226,7 @@ $('.popup-video').magnificPopup({
     });
 
     $('.category-slider').slick({
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
         dots: false,
@@ -237,26 +238,12 @@ $('.popup-video').magnificPopup({
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1
                 }
             },
             {
                 breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 560,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
