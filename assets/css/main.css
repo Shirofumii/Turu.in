@@ -720,15 +720,25 @@ a.f-btn.f-custom-btn {
   }
 }
 .header-btn a {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* jarak antara icon dan teks */
   color: #fff;
   background: #181b1d;
   padding: 0 24px;
+
   height: 50px;
   line-height: 50px;
   border-radius: 15px;
   font-weight: 500;
 }
+
+.header-btn a i {
+  margin-left: -4px; /* geser ikon sedikit ke kiri */
+  font-size: 16px;
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .header-btn a {
     padding: 0 25px;
@@ -10714,3 +10724,10 @@ p.mb-45 {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+@media (min-width: 1200px) {
+  .col-xl-3 {
+    flex: 0 0 20% !important;
+    max-width: 20% !important;
+  }
+}
